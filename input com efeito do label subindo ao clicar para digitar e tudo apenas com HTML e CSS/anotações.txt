@@ -1,0 +1,29 @@
+Caminho do arquivo web.php, onde ficam as rotas
+
+    03MPro\05.Rotas\02.parametros_das_rotas\curso\routes\web.php
+-----------------------------------------------------------------------------
+
+Listando rotas configuradas no projeto
+
+    php artisan route:list
+-----------------------------------------------------------------------------
+
+Criando rota no web.php
+
+    Route::get('/teste', function(){
+        return "Ola!";
+    });
+
+    Url para acessar a rota: http://127.0.0.1:8000/teste
+-----------------------------------------------------------------------------
+
+Rota com parâmetro:
+
+    Route::get('/ola/{nome}/{sobrenome}', function ($nome, $sobrenome) {
+        return "Olá, seja bem vindo, $nome $sobrenome";
+    });
+    
+    Parâmetro = William
+
+    Url para acessar a rota: http://127.0.0.1:8000/ola/William
+-----------------------------------------------------------------------------
